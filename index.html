@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top</title>
+</head>
+<body>
+    <a href=""><h1>利用規約</h1></a>
+    <a href=""><h1>プライバシーポリシー</h1></a>
+    <script>
+        var ua = window.navigator.userAgent.toLowerCase();
+        var language = window.navigator.language.toLowerCase();
+
+        if (ua.indexOf('chrome') != -1 || ua.indexOf('safari') != -1) {
+            if (language.indexOf('ja') != -1) {
+                // 日本語の場合
+                document.getElementsByTagName('a')[0].href = 'ja/tos.html';
+                document.getElementsByTagName('a')[1].href = 'ja/privacypolicy.html';
+                document.getElementsByTagName('h1')[0].innerText = '利用規約';
+                document.getElementsByTagName('h1')[1].innerText = 'プライバシーポリシー';
+            } else {
+                // 英語の場合
+                document.getElementsByTagName('a')[0].href = 'en/tos.html';
+                document.getElementsByTagName('a')[1].href = 'en/privacypolicy.html';
+                document.getElementsByTagName('h1')[0].innerText = 'Terms of Use';
+                document.getElementsByTagName('h1')[1].innerText = 'Privacy Policy';
+            }
+        } else {
+            // その他のブラウザの場合
+            if (language.indexOf('ja') != -1) {
+                // 日本語の場合
+                document.getElementsByTagName('a')[0].href = 'ja/tos.html';
+                document.getElementsByTagName('a')[1].href = 'ja/privacypolicy.html';
+                document.getElementsByTagName('h1')[0].innerText = '利用規約';
+                document.getElementsByTagName('h1')[1].innerText = 'プライバシーポリシー';
+            } else {
+                // 英語の場合
+                document.getElementsByTagName('a')[0].href = 'en/tos.html';
+                document.getElementsByTagName('a')[1].href = 'en/privacypolicy.html';
+                document.getElementsByTagName('h1')[0].innerText = 'Terms of Use';
+                document.getElementsByTagName('h1')[1].innerText = 'Privacy Policy';
+            }
+        }
+    </script>
+</body>
+</html>
